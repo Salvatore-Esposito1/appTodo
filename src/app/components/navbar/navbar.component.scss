@@ -1,0 +1,23 @@
+.container {
+  background-color: black;
+  padding: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+   a {
+    margin: 0px 15px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.5rem;
+     &:hover{
+      color: rgb(200, 200, 200);
+
+     }
+   }
+}
+
+@media screen and (max-width: 480px){
+  a {
+    font-size: 0.8rem !important;
+    margin: 0px 8px;
+  }
+}

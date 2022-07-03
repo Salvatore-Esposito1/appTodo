@@ -1,0 +1,15 @@
+ <div *ngIf="delay === true">
+      <h3>Recupero Tasks completate... :D</h3>
+  </div>
+  <div *ngIf="delay === false">
+    <div class="contenitore2">
+          <h1>Tasks completate: </h1>
+      <ul class="completedList">
+          <h3 *ngIf="todosService.lengthCompletedTodoList() === 0">Nessuna Task completata trovata... :(</h3>
+          <li *ngFor="let item of todosService.getCompletedTodosList(true); let i = index;"><div class="tasks">{{item.id + ') '}} {{item.title}}</div>
+            <button type="button" class="ButtonRemove" (click)="remove(item)">Elimina</button>
+          </li>
+        </ul>
+      </div>
+  </div>
+

@@ -1,0 +1,10 @@
+ <ul class="lista">
+    <h3 *ngIf="todosService.lengthTodoList() === 0">Ops, non ci sono Tasks... :(</h3>
+       <li *ngFor="let item of todosService.getTodosList(false); let i = index;"><div class="tasks">{{item.id + ') '}} {{item.title}}</div>
+         <div>
+          <button class="buttonEdit" *ngIf="this.edit == false" (click)="editTodo(item)">Modifica</button>
+          <button class="buttonSave" *ngIf="this.edit == true" (click)="saveEditTodo(item)">Salva</button>
+          <button type="button"  class="buttonCompleted" (click)="completedTodo(item)">Completa</button></div>
+     </li>
+</ul>
+

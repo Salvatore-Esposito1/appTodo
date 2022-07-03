@@ -1,0 +1,18 @@
+<div *ngIf="delay === true">
+  <h3>Recupero Tasks... :D</h3>
+</div>
+<div *ngIf="delay === false">
+<div class="contenitore">
+  <div class="allineaTesto">
+  <img src="../../../../assets/img/pencil.png" class="img1" alt="Foto matita" width="100" srcset="">
+  <img src="../../../../assets/img/laptop.svg" class="img2" alt="Foto laptop" width="100" srcset="">
+  <img src="../../../../assets/img/to-do-list.png" class="img3" alt="Foto To-do-list" width="70" srcset="">
+  <h1><mark>Inserisci una Task!</mark></h1>
+  <div id="form">
+      <input type="text" class="textInput" #todo placeholder="Inserisci Task..." maxlength="30">
+      <button type="button"  (click)="addTodo(todo.value)">Aggiungi</button>
+  </div>
+</div>
+    <app-lista-todo></app-lista-todo>
+  </div>
+</div>
